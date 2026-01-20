@@ -1,0 +1,35 @@
+@use "variables" as v;
+
+footer{
+  background-color: v.$ColorSecundario;
+  color: v.$TextoPrincipal;
+  padding: 18px 10px;
+
+  @include v.Flex(row, wrap, space-around, center);
+  gap: 14px;
+
+  h3{
+    font-size: 14px;
+    font-weight: 700;
+    margin: 0;
+  }
+
+  ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    @include v.Flex(row, nowrap, center, center);
+    gap: 12px;
+
+    a{
+      text-decoration: none;
+      display: inline-flex;
+      .rs{ width: 28px; height: 28px; }
+    }
+  }
+
+  @include v.Mobile{
+    padding: 22px 16px;
+    text-align: center;
+  }
+}

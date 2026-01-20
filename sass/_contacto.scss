@@ -1,0 +1,99 @@
+@use "variables" as v;
+
+.main-contact{
+  .contact{
+    background: v.$ColorSecundario;
+    padding: 60px 0;
+
+    .contact__top{
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 24px;
+      align-items: center;
+      margin-bottom: 28px;
+
+      .contact__hint{
+        color: v.$ColorBoton;
+        font-weight: 800;
+      }
+
+      .contact__title{
+        font-weight: 800;
+        a{ color: v.$ColorBoton; text-decoration: underline; text-underline-offset: 6px; }
+      }
+    }
+
+    .contact__grid{
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 24px;
+      align-items: start;
+
+      .contact__left{
+        .contact__left-title{ font-weight: 800; }
+        .contact__left-email{ color: rgba(0,0,0,0.7); }
+        .contact__left-note{ color: rgba(0,0,0,0.5); font-size: 12px; }
+      }
+
+      .form{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 18px;
+
+        .form__row{
+          display: grid;
+          gap: 10px;
+
+          .form__label{
+            font-weight: 700;
+            span{ color: #cc2b2b; }
+          }
+
+          .form__input{
+            border: none;
+            border-bottom: 1px solid rgba(0,0,0,0.35);
+            padding: 10px 0;
+            outline: none;
+            background: transparent;
+
+            &:focus{ border-bottom-color: v.$ColorBoton; }
+          }
+
+          &.form__row--full{
+            grid-column: 1 / -1;
+          }
+        }
+
+        .form__textarea{
+          border: none;
+          border-bottom: 1px solid rgba(0,0,0,0.35);
+          padding: 10px 0;
+          outline: none;
+          background: transparent;
+          resize: vertical;
+
+          &:focus{ border-bottom-color: v.$ColorBoton; }
+        }
+
+        .form__actions{
+          grid-column: 1 / -1;
+          margin-top: 10px;
+
+          .btn-cta{ @include v.Button(v.$ColorBoton, v.$ColorBotonLetra); padding: 10px 34px; }
+        }
+      }
+    }
+
+    @include v.Tablet{
+      .contact__top{ grid-template-columns: 1fr; }
+      .contact__grid{ grid-template-columns: 1fr; }
+      .form{ grid-template-columns: 1fr; }
+    }
+
+    @include v.Mobile{
+      .contact__top{ grid-template-columns: 1fr; }
+      .contact__grid{ grid-template-columns: 1fr; }
+      .form{ grid-template-columns: 1fr; }
+    }
+  }
+}

@@ -1,0 +1,36 @@
+@use "variables" as v;
+
+.main-activities{
+  .activities{
+    padding: 60px 0;
+
+    .activity{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      align-items: center;
+      margin-top: 28px;
+
+      .activity__img{
+        border: 1px solid v.$BordeSuave;
+        background: v.$ColorSecundario;
+      }
+
+      .activity__title{ font-size: 32px; font-weight: 800; margin: 0 0 10px; }
+      .activity__p{ color: rgba(0,0,0,0.65); margin: 0 0 18px; }
+      .btn-cta{ @include v.Button(v.$ColorBoton, v.$ColorBotonLetra); }
+
+      &.activity--reverse{
+        .activity__text{ order: 2; }
+        .activity__img{ order: 1; }
+      }
+    }
+
+    @include v.Tablet{ .activity{ grid-template-columns: 1fr; } }
+    @include v.Mobile{ .activity{ grid-template-columns: 1fr; } }
+  }
+}
+
+@include v.Mobile{
+  .main-activities .activities .activity .activity__title{ font-size: 26px; }
+}

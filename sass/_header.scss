@@ -1,0 +1,113 @@
+@use "variables" as v;
+
+.encabezado{
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: v.$ColorPrimario;
+  padding: 12px 18px;
+
+  /* (opcional) una pequeña sombra para separar del contenido */
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+
+  /* NAVBAR (Bootstrap) */
+  .navbar{
+    padding: 0; 
+
+    .navbar-brand{
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+
+      .brand-text{
+        font-weight: 800;
+        letter-spacing: 0.4px;
+        color: v.$TextoPrincipal;
+      }
+    }
+
+    /* Botón hamburguesa (móvil) */
+    .navbar-toggler{
+      border: none;
+      background-color: v.$ColorBoton;
+      padding: 8px 10px;
+
+      &:focus{
+        box-shadow: none;
+      }
+    }
+
+    /* Contenedor del menú */
+    .navbar-collapse{
+      justify-content: flex-end;
+    }
+
+    .navbar-nav{
+      gap: 10px;
+      align-items: center;
+
+      .nav-link{
+        font-weight: 700;
+        color: v.$TextoPrincipal;
+        text-decoration: none;
+        padding: 8px 10px;
+
+        &:hover{
+          filter: brightness(0.92);
+        }
+
+        &.active{
+          text-decoration: underline;
+          text-underline-offset: 6px;
+        }
+      }
+
+      /* botón Reserva Ahora */
+      .btn-reserva{
+        @include v.Button(v.$ColorBoton, v.$ColorBotonLetra);
+        min-width: 160px;
+        padding: 10px 16px;
+      }
+    }
+  }
+
+  /* Responsivo */
+  @include v.Tablet{
+    padding: 10px 14px;
+
+    .navbar .navbar-nav{
+      gap: 6px;
+
+      .btn-reserva{
+        min-width: 150px;
+      }
+    }
+  }
+
+  @include v.Mobile{
+    padding: 10px 12px;
+
+    .navbar{
+      .navbar-collapse{
+        margin-top: 10px;
+      }
+
+      .navbar-nav{
+        align-items: flex-start;
+        gap: 6px;
+
+        .nav-link{
+          padding: 8px 0;
+        }
+
+        .btn-reserva{
+          width: 100%;
+          min-width: unset;
+          justify-content: center;
+          margin-top: 6px;
+        }
+      }
+    }
+  }
+}

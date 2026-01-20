@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="220" viewBox="0 0 520 220">
+  <rect width="520" height="220" fill="none"/>
+  <path d="M70 140 L160 70 L210 110 L260 55 L335 130 L420 85 L450 140 Z" fill="#111" opacity="0.9"/>
+  <path d="M160 70 L210 110 L260 55" fill="none" stroke="#fff" stroke-width="6" opacity="0.9"/>
+  <text x="260" y="190" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="44" fill="#111">LOGO</text>
+</svg>

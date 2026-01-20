@@ -1,0 +1,72 @@
+@use "variables" as v;
+
+.main-hotel{
+  .rooms{
+    background: #F6F3EE;
+    padding: 60px 0;
+
+    .rooms__title{
+      font-family: v.$FuenteBase;
+    }
+
+    .room{
+      margin-top: 26px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      align-items: center;
+
+      .room__img{
+        border: 1px solid v.$BordeSuave;
+        background: v.$ColorSecundario;
+      }
+
+      .room__info{
+        .room__name{ font-weight: 800; margin: 0 0 6px; }
+        .room__price{ margin: 0 0 10px; color: rgba(0,0,0,0.65); }
+        .room__desc{ margin: 0 0 14px; color: rgba(0,0,0,0.65); }
+
+        .room__link{
+          font-weight: 800;
+          text-decoration: none;
+          color: rgba(0,0,0,0.8);
+          border-bottom: 2px solid v.$ColorBoton;
+          padding-bottom: 2px;
+        }
+      }
+    }
+
+    @include v.Tablet{ .room{ grid-template-columns: 1fr; } }
+    @include v.Mobile{ .room{ grid-template-columns: 1fr; } }
+  }
+
+  .hotel-about{
+    padding: 60px 0;
+
+    .feature{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      align-items: center;
+      margin-top: 26px;
+
+      .feature__img{
+        border: 1px solid v.$BordeSuave;
+        background: v.$ColorSecundario;
+      }
+
+      .feature__title{ font-weight: 800; margin: 0 0 10px; }
+      .feature__p{ color: rgba(0,0,0,0.65); margin: 0 0 18px; }
+
+      .btn-cta{ @include v.Button(v.$ColorBoton, v.$ColorBotonLetra); }
+
+      &.feature--reverse{
+        .feature__text{ order: 2; }
+        .feature__img{ order: 1; }
+      }
+    }
+
+    @include v.Tablet{ .feature{ grid-template-columns: 1fr; } }
+    @include v.Mobile{ .feature{ grid-template-columns: 1fr; } }
+  }
+}

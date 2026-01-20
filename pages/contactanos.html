@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sol de Oro - Contáctanos</title>
+
+  <link rel="shortcut icon" href="../assets/icons/Logo_SoldeOro.png" type="image/svg+xml" />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+
+  <link rel="stylesheet" href="../styles/styles.css" />
+</head>
+
+<body>
+  <header class="encabezado">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <a class="navbar-brand brand-text" href="../index.html">Sol de Oro</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav text-center align-items-lg-center">
+            <li class="nav-item"><a class="nav-link" href="./hotel.html">Hotel</a></li>
+            <li class="nav-item"><a class="nav-link" href="./actividades.html">Actividades</a></li>
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="./contactanos.html">Contáctanos</a></li>
+            <li class="nav-item nav-cta"><a class="btn btn-reserva" href="./contactanos.html">Reserva Ahora</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  
+    <section class="hero">
+      <div class="hero__copy">
+        <h1 class="hero__title">Ven Y Visita El Corazón Del Callejón De Huaylas</h1>
+        <p class="hero__subtitle">Yungay: donde el Callejón de Huaylas respira—Laguna 69, Llanganuco, Campo Santo y el Huascarán en silencio.</p>
+      </div>
+      <div class="hero__logo">
+        <img src="../assets/icons/Logo_SoldeOro.png" alt="Logo" class="hero__logo-img" />
+      </div>
+    </section>
+
+  <main class="main-contact">
+    <section class="contact">
+      <div class="container">
+        <div class="contact__top">
+          <p class="contact__hint">Contacto@soldeoro.pe</p>
+          <h2 class="contact__title">Envía un email a <a href="mailto:contacto@soldeoro.pe">contacto@soldeoro.pe</a>.</h2>
+        </div>
+
+        <div class="contact__grid">
+          <div class="contact__left">
+            <p class="contact__left-title">Contacto</p>
+            <p class="contact__left-email">contacto@soldeoro.pe</p>
+            <p class="contact__left-note">(Puedes cambiar esto luego)</p>
+          </div>
+
+          <!-- Form: sin backend. Al enviar, refresca la página (action vacío). -->
+          <form class="form" action="" method="get">
+            <div class="form__row">
+              <label class="form__label">Nombre Completo<span>*</span></label>
+              <input class="form__input" type="text" name="nombre" required />
+            </div>
+
+            <div class="form__row">
+              <label class="form__label">Email Corporativo/Personal<span>*</span></label>
+              <input class="form__input" type="email" name="email" required />
+            </div>
+
+            <div class="form__row">
+              <label class="form__label">¿Cómo podemos ayudarte?<span>*</span></label>
+              <select class="form__input" name="ayuda" required>
+                <option value="" selected disabled>Selecciona una opción</option>
+                <option>Reserva</option>
+                <option>Disponibilidad</option>
+                <option>Precios</option>
+                <option>Otra consulta</option>
+              </select>
+            </div>
+
+            <div class="form__row">
+              <label class="form__label">¿Cómo escuchaste de nosotros?<span>*</span></label>
+              <select class="form__input" name="referencia" required>
+                <option value="" selected disabled>Selecciona una opción</option>
+                <option>Instagram</option>
+                <option>Facebook</option>
+                <option>Recomendación</option>
+                <option>Google</option>
+              </select>
+            </div>
+
+            <div class="form__row form__row--full">
+              <label class="form__label">Mensaje<span>*</span></label>
+              <textarea class="form__textarea" name="mensaje" rows="6" required></textarea>
+            </div>
+
+            <div class="form__actions">
+              <button class="btn btn-cta" type="submit">Enviar →</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <h3>Renato Portella</h3>
+    <h3>Derechos Reservados</h3>
+    <nav>
+      <ul>
+        <li><a href="https://google.com" target="_blank"><img class="rs" src="../assets/icons/IG iCON.png" alt="Instagram" /></a></li>
+        <li><a href="https://google.com" target="_blank"><img class="rs" src="../assets/icons/x.svg" alt="X" /></a></li>
+        <li><a href="https://google.com" target="_blank"><img class="rs" src="../assets/icons/YT logo.png" alt="YouTube" /></a></li>
+        <li><a href="https://google.com" target="_blank"><img class="rs" src="../assets/icons/logo fb.png" alt="Facebook" /></a></li>
+      </ul>
+    </nav>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

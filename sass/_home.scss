@@ -1,0 +1,163 @@
+@use "variables" as v;
+
+.main-home{
+  
+  .why{
+    padding: 40px 0 60px;
+
+    .why__banner{
+      width: 100%;
+      border: 1px solid v.$BordeSuave;
+      background: v.$ColorSecundario;
+      margin-bottom: 18px;
+    }
+
+    .why__grid{
+      margin-top: 18px;
+      display: grid;
+      grid-template-columns: 1fr 0.9fr;
+      gap: 28px;
+      align-items: center;
+
+      .why__list{
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: grid;
+        gap: 16px;
+
+        .why__item{
+          display: grid;
+          grid-template-columns: 42px 1fr;
+          gap: 14px;
+          align-items: start;
+
+          .why__num{
+            width: 34px;
+            height: 34px;
+            border-radius: 999px;
+            background: v.$ColorBoton;
+            color: v.$ColorBotonLetra;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+          }
+
+          .why__h{
+            font-size: 16px;
+            font-weight: 800;
+            margin: 0 0 4px;
+          }
+
+          .why__p{
+            margin: 0;
+            color: rgba(0,0,0,0.65);
+          }
+        }
+      }
+
+      .why__imglink{
+        display: block;
+        border: 1px solid v.$BordeSuave;
+        background: v.$ColorSecundario;
+      }
+    }
+
+    @include v.Tablet{
+      .why__grid{ grid-template-columns: 1fr; }
+    }
+    @include v.Mobile{
+      .why__grid{ grid-template-columns: 1fr; }
+    }
+  }
+
+  // sección blanca (cards)
+  .explora{
+    background: v.$ColorSecundario;
+    padding: 60px 0;
+
+    .cards{
+      margin-top: 24px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+
+      .card{
+        @extend %CardBase;
+        overflow: hidden;
+        transition: transform 180ms ease;
+
+        &:hover{ transform: translateY(-2px); }
+
+        .card__img{ aspect-ratio: 4 / 3; object-fit: cover; }
+
+        .card__body{
+          padding: 14px;
+          text-align: center;
+
+          .card__title{ font-size: 14px; font-weight: 800; margin: 0; }
+          .card__meta{ margin: 8px 0 0; font-weight: 700; color: rgba(0,0,0,0.55); }
+        }
+      }
+    }
+
+    .btn-cta{
+      margin: 22px auto 0;
+      display: inline-flex;
+      @include v.Button(v.$ColorBoton, v.$ColorBotonLetra);
+      padding: 10px 26px;
+    }
+
+    @include v.Tablet{
+      .cards{ grid-template-columns: 1fr; }
+    }
+    @include v.Mobile{
+      .cards{ grid-template-columns: 1fr; }
+    }
+  }
+
+  // sección about (azul)
+  .about{
+    padding: 60px 0;
+
+    .about__grid{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      align-items: center;
+
+      .about__p{ color: rgba(0,0,0,0.65); margin: 14px 0 22px; }
+
+      .btn-cta{ @include v.Button(v.$ColorBoton, v.$ColorBotonLetra); }
+
+      .about__image{
+        border: 1px solid v.$BordeSuave;
+        background: v.$ColorSecundario;
+      }
+    }
+
+    @include v.Tablet{ .about__grid{ grid-template-columns: 1fr; } }
+    @include v.Mobile{ .about__grid{ grid-template-columns: 1fr; } }
+  }
+}
+
+.section-kicker{
+  text-align: center;
+  margin: 0;
+  color: rgba(0,0,0,0.65);
+}
+
+.section-title{
+  font-size: 42px;
+  font-weight: 800;
+  margin: 10px 0 10px;
+}
+
+.section-subtitle{
+  color: rgba(0,0,0,0.65);
+}
+
+@include v.Mobile{
+  .section-title{ font-size: 30px; }
+}

@@ -1,0 +1,47 @@
+@use "variables" as v;
+
+.hero{
+background-color: v.$ColorPrimario;
+padding: 28px 18px 18px;
+
+@include v.Flex(row, nowrap, space-between, center);
+gap: 24px;
+
+.hero__copy{
+    max-width: 720px;
+
+.hero__title{
+    font-size: 48px;
+    line-height: 1.05;
+    font-weight: 800;
+    color: v.$TextoPrincipal;
+    margin-bottom: 12px;
+    }
+
+    .hero__subtitle{
+    color: rgba(0,0,0,0.55);
+    max-width: 620px;
+    }
+}
+
+.hero__logo{
+    width: 360px;
+    max-width: 40vw;
+
+    .hero__logo-img{
+    width: 100%;
+    height: auto;
+    }
+}
+
+@include v.Tablet{
+    .hero__copy .hero__title{ font-size: 38px; }
+}
+
+@include v.Mobile{
+    @include v.Flex(column, nowrap, flex-start, flex-start);
+
+    .hero__logo{ width: 240px; max-width: 70vw; }
+    .hero__copy .hero__title{ font-size: 34px; }
+}
+}
