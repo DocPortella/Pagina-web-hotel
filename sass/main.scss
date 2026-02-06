@@ -1,4 +1,5 @@
 // sass --watch sass/main.scss styles/styles.css
+html { background: red !important; }
 
 @use "variables";
 @use "header";
@@ -7,4 +8,4 @@
 @use "hotel";
 @use "habitaciones";
 @use "actividades";
-@use "contactanos";
+@use "contacto";
