@@ -1,109 +1,128 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sol de Oro - Actividades</title>
+    <title>Actividades en Yungay | Sol de Oro – Callejón de Huaylas</title>
+    <meta name="description" content="Descubre actividades cerca de Yungay: Campo Santo, Laguna 69, Laguna Keushu, Llanganuco y Puquio de Matacoto. Explora el Callejón de Huaylas desde Sol de Oro." />
+    <link rel="canonical" href="https://tudominio.com/pages/actividades.html" />
 
-  <link rel="shortcut icon" href="../assets/icons/Logo_SoldeOro.png" type="image/svg+xml" />
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+  <body>
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+    <header class="site-header">
+      <nav class="nav" aria-label="Navegación principal">
+        <a class="nav__brand" href="../index.html" aria-label="Ir a Home">Sol de Oro</a>
 
-  <link rel="stylesheet" href="../styles/styles.css" />
-</head>
+        <ul class="nav__links">
+          <li><a href="hotel.html">Hotel</a></li>
+          <li><a href="habitaciones.html">Habitaciones</a></li>
+          <li><a class="is-active" href="actividades.html" aria-current="page">Actividades</a></li>
+          <li><a href="contactanos.html">Contáctanos</a></li>
+        </ul>
 
-<body>
-  <header class="encabezado">
-    <nav class="navbar navbar-expand-lg">
-      <div class="container-fluid">
-        <a class="navbar-brand brand-text" href="../index.html">Sol de Oro</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+        <a class="btn btn--primary nav__cta" href="contactanos.html">Reserva Ahora</a>
+      </nav>
+    </header>
 
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-          <ul class="navbar-nav text-center align-items-lg-center">
-            <li class="nav-item"><a class="nav-link" href="./hotel.html">Hotel</a></li>
-            <li class="nav-item"><a class="nav-link active" aria-current="page" href="./actividades.html">Actividades</a></li>
-            <li class="nav-item"><a class="nav-link" href="./contactanos.html">Contáctanos</a></li>
-            <li class="nav-item nav-cta"><a class="btn btn-reserva" href="./contactanos.html">Reserva Ahora</a></li>
-          </ul>
+    <!-- HERO -->
+    <section class="page-hero" aria-label="Encabezado de página">
+      <h1>Actividades</h1>
+      <p>Explora el corazón del Callejón de Huaylas desde Yungay: naturaleza, historia y aventura, sin perder tiempo en traslados.</p>
+    </section>
+
+    <main class="activities">
+      <!-- Sección principal -->
+      <section class="activities__intro" aria-labelledby="destacadas-title">
+        <h2 id="destacadas-title">Actividades destacadas</h2>
+        <p>Seleccionamos rutas y lugares que combinan paisajes únicos y experiencias tranquilas. Si deseas, podemos recomendar horarios y tips según el clima.</p>
+      </section>
+
+      <!-- LISTADO -->
+      <section class="activities__list" aria-label="Lista de actividades">
+        <!-- 1 -->
+        <article class="activity">
+          <div class="activity__media">
+            <img src="../images/act-campo-santo.jpg" alt="Campo Santo de Yungay (imagen referencial)" />
+          </div>
+          <div class="activity__info">
+            <h3>Campo Santo (Yungay)</h3>
+            <p>Un lugar de memoria y respeto. Caminar entre sus senderos es una pausa silenciosa que conecta con la historia del pueblo.</p>
+            <a class="btn btn--primary" href="contactanos.html">Reserva Ahora</a>
+          </div>
+      </article>
+
+        <!-- 2 -->
+        <article class="activity activity--reverse">
+          <div class="activity__media">
+            <img src="../images/act-laguna-keushu.jpg" alt="Laguna Keushu (imagen referencial)" />
+          </div>
+          <div class="activity__info">
+            <h3>Laguna Keushu</h3>
+            <p>Una laguna altoandina tranquila y menos concurrida. Ideal si buscas paisaje puro y silencio.</p>
+            <a class="btn btn--primary" href="contactanos.html">Reserva Ahora</a>
+          </div>
+      </article>
+
+        <!-- 3 -->
+        <article class="activity">
+          <div class="activity__media">
+            <img src="../images/act-llanganuco.jpg" alt="Laguna Llanganuco (imagen referencial)" />
+          </div>
+          <div class="activity__info">
+            <h3>Laguna Llanganuco</h3>
+            <p>El clásico que nunca falla: miradores, carreteras escénicas y lagunas color esmeralda.</p>
+            <a class="btn btn--primary" href="contactanos.html">Reserva Ahora</a>
+          </div>
+        </article>
+
+        <!-- 4 -->
+        <article class="activity activity--reverse">
+          <div class="activity__media">
+            <img src="../images/act-puquio.jpg" alt="Puquio de Matacoto (imagen referencial)" />
+          </div>
+          <div class="activity__info">
+            <h3>Puquio de Matacoto</h3>
+            <p>Un rincón natural refrescante para desconectar. Perfecto para un paseo corto y cerrar con algo local.</p>
+            <a class="btn btn--primary" href="contactanos.html">Reserva Ahora</a>
+          </div>
+        </article>
+
+        <!-- 5 -->
+        <article class="activity">
+          <div class="activity__media">
+            <img src="../images/act-laguna-69.jpg" alt="Laguna 69 (imagen referencial)" />
+          </div>
+          <div class="activity__info">
+            <h3>Laguna 69</h3>
+            <p>Una de las caminatas más icónicas. Recomendable salir temprano y llevar abrigo.</p>
+            <a class="btn btn--primary" href="contactanos.html">Reserva Ahora</a>
+          </div>
+        </article>
+      </section>
+
+      <!-- CTA final -->
+      <section class="activities__cta" aria-labelledby="cta-title">
+        <h2 id="cta-title">¿Listo para planear tu visita?</h2>
+        <p>Escríbenos y te ayudamos a elegir rutas según tu tiempo, temporada y energía.</p>
+        <a class="btn btn--primary" href="contactanos.html">Contáctanos</a>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <p class="site-footer__left">Renato Portella</p>
+        <p class="site-footer__center">Derechos Reservados</p>
+        <div class="site-footer__right" aria-label="Redes sociales">
+          <a href="https://google.com" aria-label="Instagram">IG</a>
+          <a href="https://google.com" aria-label="X">X</a>
+          <a href="https://google.com" aria-label="YouTube">YT</a>
+          <a href="https://google.com" aria-label="Facebook">FB</a>
         </div>
       </div>
-    </nav>   
-  </header>
+    </footer>
 
-    <section class="hero">
-      <div class="hero__copy">
-        <h1 class="hero__title">Ven Y Visita El Corazón Del Callejón De Huaylas</h1>
-        <p class="hero__subtitle">Yungay: donde el Callejón de Huaylas respira—Laguna 69, Llanganuco, Campo Santo y el Huascarán en silencio.</p>
-      </div>
-      <div class="hero__logo">
-        <img src="../assets/icons/Logo_SoldeOro.png" alt="Logo" class="hero__logo-img" />
-      </div>
-    </section>
-
-  <main class="main-activities">
-    <section class="activities">
-      <div class="container">
-        <article class="activity">
-          <div class="activity__text">
-            <h2 class="activity__title">Campo Santo (Yungay)</h2>
-            <p class="activity__p">Un lugar de memoria y respeto. Ideal para un atardecer en calma.</p>
-            <a class="btn btn-cta" href="./contactanos.html">Reserva Ahora</a>
-          </div>
-          <img class="activity__img" src="../assets/img/Actividades_camposanto.jpg" alt="Campo Santo" />
-        </article>
-
-        <article class="activity activity--reverse">
-          <div class="activity__text">
-            <h2 class="activity__title">Laguna Keushu</h2>
-            <p class="activity__p">Una laguna tranquila y menos concurrida. Perfecta si buscas paisaje y silencio.</p>
-            <a class="btn btn-cta" href="./contactanos.html">Reserva Ahora</a>
-          </div>
-          <img class="activity__img" src="../assets/img/Actividades_keushu.jpg" alt="Laguna Keushu" />
-        </article>
-
-        <article class="activity">
-          <div class="activity__text">
-            <h2 class="activity__title">Laguna Llanganuco</h2>
-            <p class="activity__p">Carretera escénica, miradores y lagunas color esmeralda. Un clásico.</p>
-            <a class="btn btn-cta" href="./contactanos.html">Reserva Ahora</a>
-          </div>
-          <img class="activity__img" src="../assets/img/Actividades_llanganuco.jpeg" alt="Laguna Llanganuco" />
-        </article>
-
-        <article class="activity activity--reverse">
-          <div class="activity__text">
-            <h2 class="activity__title">Puquio de Matacoto</h2>
-            <p class="activity__p">Un rincón natural y fresco para desconectar, tomar fotos y cerrar con algo local.</p>
-            <a class="btn btn-cta" href="./contactanos.html">Reserva Ahora</a>
-          </div>
-          <img class="activity__img" src="../assets/img/Actividades_matacoto.JPG" alt="Puquio de Matacoto" />
-        </article>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <h3>Renato Portella</h3>
-    <h3>Derechos Reservados</h3>
-    <nav>
-      <ul>
-        <li><a href="https://google.com" target="_blank"><img class="rs" src="../assets/icons/IG iCON.png" alt="Instagram" /></a></li>
-        <li><a href="https://google.com" target="_blank"><img class="rs" src="../assets/icons/x.svg" alt="X" /></a></li>
-        <li><a href="https://google.com" target="_blank"><img class="rs" src="../assets/icons/YT logo.png" alt="YouTube" /></a></li>
-        <li><a href="https://google.com" target="_blank"><img class="rs" src="../assets/icons/logo fb.png" alt="Facebook" /></a></li>
-      </ul>
-    </nav>
-  </footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-    crossorigin="anonymous"></script>
-</body>
-
-</html>
+  </body>
+  </html>

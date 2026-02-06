@@ -1,185 +1,129 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sol de Oro - Home</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <link rel="shortcut icon" href="./assets/icons/Logo_SoldeOro.png" type="image/svg+xml" />
+  <title>Sol de Oro | Hotel en Yungay – Callejón de Huaylas</title>
+  <meta name="description" content="Hospédate en Yungay y explora el Callejón de Huaylas: Laguna 69, Llanganuco, Campo Santo y el Huascarán." />
+  <link rel="canonical" href="https://tudominio.com/" />
 
-  <!-- Bootstrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
-
-  <!-- Tu CSS (compilado desde SCSS) -->
-  <link rel="stylesheet" href="./styles/styles.css" />
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 
 <body>
-  <!-- HEADER (componente común) -->
-  <header class="encabezado">
-    <nav class="navbar navbar-expand-lg">
-      <div class="container-fluid">
-        <!-- Brand: texto (clic -> Home) -->
-        <a class="navbar-brand brand-text" href="./index.html">Sol de Oro</a>
 
-        <!-- Botón hamburguesa (Bootstrap lo controla) -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+  <!-- HEADER (solo nav + botón) -->
+  <header class="site-header">
+    <nav class="nav" aria-label="Navegación principal">
+      <a class="nav__brand" href="index.html" aria-label="Ir a Home">Sol de Oro</a>
 
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-          <ul class="navbar-nav text-center align-items-lg-center">
-            <li class="nav-item"><a class="nav-link" href="./pages/hotel.html">Hotel</a></li>
-            <li class="nav-item"><a class="nav-link" href="./pages/actividades.html">Actividades</a></li>
-            <li class="nav-item"><a class="nav-link" href="./pages/contactanos.html">Contáctanos</a></li>
-            <li class="nav-item nav-cta">
-              <!-- Reserva ahora: siempre lleva a Contáctanos -->
-              <a class="btn btn-reserva" href="./pages/contactanos.html">Reserva Ahora</a>
-            </li>
-          </ul>
-        </div>
-      </div>
+      <ul class="nav__links">
+        <li><a href="pages/hotel.html">Hotel</a></li>
+        <li><a href="pages/habitaciones.html">Habitaciones</a></li>
+        <li><a href="pages/actividades.html">Actividades</a></li>
+        <li><a href="pages/contactanos.html">Contáctanos</a></li>
+      </ul>
+
+      <a class="btn btn--primary nav__cta" href="pages/contactanos.html">Reserva Ahora</a>
     </nav>
   </header>
 
-    <!-- HERO (parte del header visual en tus screenshots) -->
-    <section class="hero">
-      <div class="hero__copy">
-        <h1 class="hero__title">Ven Y Visita El Corazón Del Callejón De Huaylas</h1>
-        <p class="hero__subtitle">
-          Yungay: donde el Callejón de Huaylas respira—Laguna 69, Llanganuco, Campo Santo y el Huascarán en silencio.
-        </p>
-      </div>
+  <!-- HERO  -->
+  <section class="hero" aria-label="Presentación">
+    <div class="hero__content">
+      <h1>Ven y visita el corazón del Callejón de Huaylas</h1>
+      <p>Yungay: donde el Callejón de Huaylas respira—Laguna 69, Llanganuco, Campo Santo y el Huascarán en silencio.</p>
+    </div>
 
-      <div class="hero__logo">
-        
-        <img src="./assets/icons/Logo_SoldeOro.png" alt="Logo" class="hero__logo-img" />
-      </div>
-    </section>
+    <div class="hero__media" aria-label="Logo">
+      <!-- -->
+      <img src="images/logo-placeholder.png" alt="Logo" />
+    </div>
+  </section>
 
-  <main class="main-home">
+  <main>
     <!-- Sección: Por qué hospedarte -->
-    <section class="why">
-      <div class="container">
-        <img class="why__banner" src="./assets/img/Home_Imagen 1.JPG" alt="Imagen Banner (reemplazar)" />
+    <section class="why" aria-labelledby="why-title">
+      <h2 id="why-title">¿Por qué hospedarte aquí?</h2>
 
-        <h2 class="section-title">¿Por qué hospedarte aquí?</h2>
-        <p class="section-subtitle">
-          Quédate en Yungay porque es el mejor punto de partida para tu aventura en el Callejón.
-        </p>
+      <div class="why__grid">
+        <article class="why__item">
+          <h3>Base perfecta para los imperdibles</h3>
+          <p>Desde Yungay estás cerca de Laguna 69, Llanganuco, Campo Santo y el Huascarán.</p>
+        </article>
 
-        <div class="why__grid">
-          <ol class="why__list">
-            <li class="why__item">
-              <span class="why__num">1</span>
-              <div class="why__text">
-                <h3 class="why__h">Base perfecta para los imperdibles (menos traslados, más experiencia)</h3>
-                <p class="why__p">Cerca de Laguna 69, Llanganuco, Campo Santo y Huascarán.</p>
-              </div>
-            </li>
+        <article class="why__item">
+          <h3>Naturaleza + aventura en un solo lugar</h3>
+          <p>Rutas, trekking, miradores y paisajes para explorar a tu ritmo.</p>
+        </article>
 
-            <li class="why__item">
-              <span class="why__num">2</span>
-              <div class="why__text">
-                <h3 class="why__h">Lo mejor de la Naturaleza + aventura en un solo lugar</h3>
-                <p class="why__p">Rutas, paisajes, miradores y lagunas para trekking, foto y calma.</p>
-              </div>
-            </li>
-
-            <li class="why__item">
-              <span class="why__num">3</span>
-              <div class="why__text">
-                <h3 class="why__h">Historia y cultura que le dan alma al viaje</h3>
-                <p class="why__p">Memoria, autenticidad y hospitalidad local para una experiencia real.</p>
-              </div>
-            </li>
-          </ol>
-
-          <!-- Imagen derecha: si haces clic -> Actividades -->
-          <a class="why__imglink" href="./pages/actividades.html" aria-label="Ir a Actividades">
-            <img class="why__image" src="./assets/img/Home_Imagen2.JPG" alt="Imagen (reemplazar)" />
-          </a>
-        </div>
+        <article class="why__item">
+          <h3>Historia y cultura</h3>
+          <p>Memoria, tradición y hospitalidad local que le dan alma al viaje.</p>
+        </article>
       </div>
     </section>
 
-    <!-- Sección: Actividades  -->
-    <section class="explora">
-      <div class="container">
-        <p class="section-kicker">— Actividades —</p>
-        <h2 class="section-title">Explora el corazón del Callejón de Huaylas</h2>
+    <!-- CTA a Actividades -->
+    <section class="activities-teaser" aria-labelledby="act-title">
+      <h2 id="act-title">Explora el corazón del Callejón de Huaylas</h2>
 
-        <div class="cards">
-          <a class="card" href="./pages/actividades.html">
-            <img class="card__img" src="./assets/img/Home_Campo Santo.jpg" alt="Campo Santo (reemplazar)" />
-            <div class="card__body">
-              <h3 class="card__title">Campo Santo</h3>
-              <p class="card__meta">$25</p>
-            </div>
-          </a>
+      <div class="cards">
+        <a class="card" href="pages/actividades.html" aria-label="Ir a Actividades: Campo Santo">
+          <img src="images/actividad-camposanto.jpg" alt="Campo Santo (imagen referencial)" />
+          <div class="card__body">
+            <h3>Campo Santo</h3>
+          </div>
+        </a>
 
-          <a class="card" href="./pages/actividades.html">
-            <img class="card__img" src="./assets/img/Home_Laguna69.jpg" alt="Laguna 69 (reemplazar)" />
-            <div class="card__body">
-              <h3 class="card__title">Laguna 69</h3>
-              <p class="card__meta">$75</p>
-            </div>
-          </a>
+        <a class="card" href="pages/actividades.html" aria-label="Ir a Actividades: Laguna 69">
+          <img src="images/actividad-laguna69.jpg" alt="Laguna 69 (imagen referencial)" />
+          <div class="card__body">
+            <h3>Laguna 69</h3>
+          </div>
+        </a>
 
-          <a class="card" href="./pages/actividades.html">
-            <img class="card__img" src="./assets/img/Home_Laguna Keushu.jpg" alt="Laguna Keushu (reemplazar)" />
-            <div class="card__body">
-              <h3 class="card__title">Laguna Keushu</h3>
-              <p class="card__meta">$50</p>
-            </div>
-          </a>
-        </div>
+        <a class="card" href="pages/actividades.html" aria-label="Ir a Actividades: Laguna Keushu">
+          <img src="images/actividad-keushu.jpg" alt="Laguna Keushu (imagen referencial)" />
+          <div class="card__body">
+            <h3>Laguna Keushu</h3>
+          </div>
+        </a>
+      </div>
 
-        <a class="btn btn-cta" href="./pages/actividades.html">Explora Más</a>
+      <div class="center">
+        <a class="btn btn--primary" href="pages/actividades.html">Explora Más</a>
       </div>
     </section>
 
-    <!-- Sección: Sobre nosotros -->
-    <section class="about">
-      <div class="container about__grid">
+    <!-- Sobre nosotros -->
+    <section class="about" aria-labelledby="about-title">
+      <h2 id="about-title">Sobre nosotros</h2>
+      <div class="about__grid">
         <div class="about__text">
-          <h2 class="section-title">Sobre Nosotros</h2>
-          <p class="about__p">
-            Este hotel nace de una historia bien yungaina. Aquí no solo te hospedas: te quedas en un lugar con memoria,
-            calor humano y vistas al Huascarán.
-          </p>
-          <a class="btn btn-cta" href="./pages/contactanos.html">Reserva Ahora</a>
+          <p>Este hotel nace de una historia yungaína. Aquí no solo te hospedas: te quedas en una casa con memoria, cariño y calma.</p>
+          <a class="btn btn--primary" href="pages/contactanos.html">Reserva Ahora</a>
         </div>
-
-        <div class="about__image">
-          <img src="./assets/img/Home_nosotros.jpeg" alt="Imagen Sobre Nosotros (reemplazar)" />
+        <div class="about__media">
+          <img src="images/familia.jpg" alt="Foto familiar (imagen referencial)" />
         </div>
       </div>
     </section>
   </main>
 
-  <!-- FOOTER -->
-  <footer>
-    <h3>Renato Portella</h3>
-    <h3>Derechos Reservados</h3>
-
-    <nav>
-      <ul>
-        <li><a href="https://google.com" target="_blank"><img class="rs" src="./assets/icons/IG iCON.png" alt="Instagram" /></a></li>
-        <li><a href="https://google.com" target="_blank"><img class="rs" src="./assets/icons/x.svg" alt="X" /></a></li>
-        <li><a href="https://google.com" target="_blank"><img class="rs" src="./assets/icons/YT logo.png" alt="YouTube" /></a></li>
-        <li><a href="https://google.com" target="_blank"><img class="rs" src="./assets/icons/logo fb.png" alt="Facebook" /></a></li>
-      </ul>
-    </nav>
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <p class="site-footer__left">Renato Portella</p>
+      <p class="site-footer__center">Derechos Reservados</p>
+      <div class="site-footer__right" aria-label="Redes sociales">
+        <a href="https://google.com" aria-label="Instagram">IG</a>
+        <a href="https://google.com" aria-label="X">X</a>
+        <a href="https://google.com" aria-label="YouTube">YT</a>
+        <a href="https://google.com" aria-label="Facebook">FB</a>
+      </div>
+    </div>
   </footer>
-
-  <!-- Bootstrap -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-    crossorigin="anonymous"></script>
 </body>
-
 </html>

@@ -1,130 +1,113 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sol de Oro - Contáctanos</title>
+    <title>Contáctanos | Sol de Oro – Reserva en Yungay</title>
+    <meta name="description" content="Contáctanos para reservar tu estadía en Sol de Oro (Yungay). Completa el formulario y coordinamos tu visita al Callejón de Huaylas." />
+    <link rel="canonical" href="https://tudominio.com/pages/contactanos.html" />
 
-  <link rel="shortcut icon" href="../assets/icons/Logo_SoldeOro.png" type="image/svg+xml" />
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+  <body>
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+    <header class="site-header">
+      <nav class="nav" aria-label="Navegación principal">
+        <a class="nav__brand" href="../index.html" aria-label="Ir a Home">Sol de Oro</a>
 
-  <link rel="stylesheet" href="../styles/styles.css" />
-</head>
+        <ul class="nav__links">
+          <li><a href="hotel.html">Hotel</a></li>
+          <li><a href="habitaciones.html">Habitaciones</a></li>
+          <li><a href="actividades.html">Actividades</a></li>
+          <li><a class="is-active" href="contactanos.html" aria-current="page">Contáctanos</a></li>
+        </ul>
 
-<body>
-  <header class="encabezado">
-    <nav class="navbar navbar-expand-lg">
-      <div class="container-fluid">
-        <a class="navbar-brand brand-text" href="../index.html">Sol de Oro</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+        <a class="btn btn--primary nav__cta" href="contactanos.html">Reserva Ahora</a>
+      </nav>
+    </header>
 
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-          <ul class="navbar-nav text-center align-items-lg-center">
-            <li class="nav-item"><a class="nav-link" href="./hotel.html">Hotel</a></li>
-            <li class="nav-item"><a class="nav-link" href="./actividades.html">Actividades</a></li>
-            <li class="nav-item"><a class="nav-link active" aria-current="page" href="./contactanos.html">Contáctanos</a></li>
-            <li class="nav-item nav-cta"><a class="btn btn-reserva" href="./contactanos.html">Reserva Ahora</a></li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-  </header>
-  
-    <section class="hero">
-      <div class="hero__copy">
-        <h1 class="hero__title">Ven Y Visita El Corazón Del Callejón De Huaylas</h1>
-        <p class="hero__subtitle">Yungay: donde el Callejón de Huaylas respira—Laguna 69, Llanganuco, Campo Santo y el Huascarán en silencio.</p>
-      </div>
-      <div class="hero__logo">
-        <img src="../assets/icons/Logo_SoldeOro.png" alt="Logo" class="hero__logo-img" />
-      </div>
+    <section class="page-hero" aria-label="Encabezado de página">
+      <h1>Contáctanos</h1>
+      <p>Envíanos un mensaje y coordinamos tu reserva.</p>
     </section>
 
-  <main class="main-contact">
-    <section class="contact">
-      <div class="container">
-        <div class="contact__top">
-          <p class="contact__hint">Contacto@soldeoro.pe</p>
-          <h2 class="contact__title">Envía un email a <a href="mailto:contacto@soldeoro.pe">contacto@soldeoro.pe</a>.</h2>
-        </div>
+    <main class="contact">
+      <section class="contact__wrap" aria-labelledby="contact-title">
+        <h2 id="contact-title">Envíanos un email</h2>
 
         <div class="contact__grid">
-          <div class="contact__left">
-            <p class="contact__left-title">Contacto</p>
-            <p class="contact__left-email">contacto@soldeoro.pe</p>
-            <p class="contact__left-note">(Puedes cambiar esto luego)</p>
-          </div>
+          <!-- Info lateral (opcional) -->
+          <aside class="contact__aside" aria-label="Información de contacto">
+            <h3>Correo</h3>
+            <p><a href="mailto:contacto@soldeoro.pe">contacto@soldeoro.pe</a></p>
 
-          <!-- Form: sin backend. Al enviar, refresca la página (action vacío). -->
-          <form class="form" action="" method="get">
+            <h3>Nota</h3>
+            <p>Este formulario es demostrativo (no envía a servidor). Al presionar “Enviar” se recarga la página.</p>
+          </aside>
+
+          <!-- Form -->
+          <!-- action="" + method="get" => refresca la página -->
+          <form class="form" action="" method="get" aria-label="Formulario de contacto">
             <div class="form__row">
-              <label class="form__label">Nombre Completo<span>*</span></label>
-              <input class="form__input" type="text" name="nombre" required />
+              <label for="fullname">Nombre completo <span aria-hidden="true">*</span></label>
+              <input id="fullname" name="fullname" type="text" placeholder="Tu nombre" required />
             </div>
 
             <div class="form__row">
-              <label class="form__label">Email Corporativo/Personal<span>*</span></label>
-              <input class="form__input" type="email" name="email" required />
+              <label for="email">Email corporativo/personal <span aria-hidden="true">*</span></label>
+              <input id="email" name="email" type="email" placeholder="tuemail@ejemplo.com" required />
+            </div>
+
+            <div class="form__row form__row--two">
+              <div>
+                <label for="help">¿Cómo podemos ayudarte? <span aria-hidden="true">*</span></label>
+                <select id="help" name="help" required>
+                  <option value="" selected disabled>Selecciona una opción</option>
+                  <option value="reserva">Quiero reservar</option>
+                  <option value="consulta">Tengo una consulta</option>
+                  <option value="tarifas">Tarifas y disponibilidad</option>
+                </select>
+              </div>
+
+              <div>
+                <label for="ref">¿Cómo escuchaste de nosotros? <span aria-hidden="true">*</span></label>
+                <select id="ref" name="ref" required>
+                  <option value="" selected disabled>Selecciona una opción</option>
+                  <option value="google">Google</option>
+                  <option value="redes">Redes sociales</option>
+                  <option value="referido">Referido</option>
+                  <option value="otro">Otro</option>
+                </select>
+              </div>
             </div>
 
             <div class="form__row">
-              <label class="form__label">¿Cómo podemos ayudarte?<span>*</span></label>
-              <select class="form__input" name="ayuda" required>
-                <option value="" selected disabled>Selecciona una opción</option>
-                <option>Reserva</option>
-                <option>Disponibilidad</option>
-                <option>Precios</option>
-                <option>Otra consulta</option>
-              </select>
-            </div>
-
-            <div class="form__row">
-              <label class="form__label">¿Cómo escuchaste de nosotros?<span>*</span></label>
-              <select class="form__input" name="referencia" required>
-                <option value="" selected disabled>Selecciona una opción</option>
-                <option>Instagram</option>
-                <option>Facebook</option>
-                <option>Recomendación</option>
-                <option>Google</option>
-              </select>
-            </div>
-
-            <div class="form__row form__row--full">
-              <label class="form__label">Mensaje<span>*</span></label>
-              <textarea class="form__textarea" name="mensaje" rows="6" required></textarea>
+              <label for="message">Mensaje <span aria-hidden="true">*</span></label>
+              <textarea id="message" name="message" rows="6" placeholder="Cuéntanos fechas aproximadas y cuántas personas..." required></textarea>
             </div>
 
             <div class="form__actions">
-              <button class="btn btn-cta" type="submit">Enviar →</button>
+              <button class="btn btn--primary" type="submit">Enviar →</button>
+              <button class="btn btn--ghost" type="reset">Limpiar</button>
             </div>
           </form>
         </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <p class="site-footer__left">Renato Portella</p>
+        <p class="site-footer__center">Derechos Reservados</p>
+        <div class="site-footer__right" aria-label="Redes sociales">
+          <a href="https://google.com" aria-label="Instagram">IG</a>
+          <a href="https://google.com" aria-label="X">X</a>
+          <a href="https://google.com" aria-label="YouTube">YT</a>
+          <a href="https://google.com" aria-label="Facebook">FB</a>
+        </div>
       </div>
-    </section>
-  </main>
+    </footer>
 
-  <footer>
-    <h3>Renato Portella</h3>
-    <h3>Derechos Reservados</h3>
-    <nav>
-      <ul>
-        <li><a href="https://google.com" target="_blank"><img class="rs" src="../assets/icons/IG iCON.png" alt="Instagram" /></a></li>
-        <li><a href="https://google.com" target="_blank"><img class="rs" src="../assets/icons/x.svg" alt="X" /></a></li>
-        <li><a href="https://google.com" target="_blank"><img class="rs" src="../assets/icons/YT logo.png" alt="YouTube" /></a></li>
-        <li><a href="https://google.com" target="_blank"><img class="rs" src="../assets/icons/logo fb.png" alt="Facebook" /></a></li>
-      </ul>
-    </nav>
-  </footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-    crossorigin="anonymous"></script>
-</body>
-
+  </body>
 </html>

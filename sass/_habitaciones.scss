@@ -1,0 +1,71 @@
+@use "variables" as v;
+
+.page-hero {
+  background: v.$ColorPrimario;
+  padding: 48px 24px;
+
+  h1 {
+    margin: 0 0 8px;
+  }
+
+  p {
+    margin: 0;
+    max-width: 70ch;
+    color: rgba(0,0,0,0.55); // opcional, para que se vea más suave
+  }
+}
+
+.rooms {
+  background: v.$ColorSecundario;
+  padding: 40px 24px;
+
+  &__list {
+    max-width: 1100px;
+    margin: 0 auto;
+
+    h2 {
+      margin-bottom: 24px;
+    }
+  }
+}
+
+.room {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 24px;
+  padding: 24px 0;
+  border-bottom: 1px solid rgba(0,0,0,.12);
+
+  &__media img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  &__price {
+    font-weight: 700;
+    margin: 8px 0 12px;
+  }
+
+  &__link {
+    display: inline-block;
+    margin-top: 12px;
+    font-weight: 700;
+    color: v.$TextoPrincipal;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  /* Responsiveness usando TUS mixins (Tablet/Mobile) */
+  @include v.Tablet {
+    grid-template-columns: 1fr;
+  }
+
+  @include v.Mobile {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
